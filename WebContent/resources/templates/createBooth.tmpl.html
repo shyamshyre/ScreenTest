@@ -1,0 +1,40 @@
+
+<form class="form-horizontal">
+	<div class="control-group">
+		<label class="control-label" for="BoothName">Booth Name<span>*</span></label>
+		<div class="controls">
+			<input type="text" id="BoothName" data-bind="text: CreateBoothViewModel.boothName">
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="Description">Description<span>*</span></label>
+		<div class="controls">
+			<textarea rows="2" id="Description" data-bind="text: CreateBoothViewModel.description"></textarea>
+		</div>
+
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="BoothType">Select Booth Type<span>*</span></label>
+		<div class="controls">
+			<SELECT 
+				data-bind="'options': ConstantsViewModel.chairsList,  'optionsText': 'chairName', 'optionsValue':'chairId','optionsCaption': 'Select...', value: CreateBoothViewModel.boothType">
+			</SELECT>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="BoothAgent">Select Booth
+			Agent</label>
+		<div class="controls">
+			<SELECT 
+				data-bind="'options': ConstantsViewModel.chairsList,  'optionsText': 'chairName', 'optionsValue':'chairId','optionsCaption': 'Select...', value: CreateBoothViewModel.boothAgent">
+			</SELECT>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="controls">
+			<button type="button" class="btn" data-bind="click: function(){ CreateBoothViewModel.submitBooth();}">Create Booth</button>
+			<button type="button" class="btn">Back</button>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,30 @@
+
+
+<script type="text/html" id="galleryTmpl">
+<ul class="thumbnails" data-bind="template: { name: 'imgTmpl', foreach: gSetList , visible: gSetList().length > 0}">
+</ul>
+</script>
+
+
+<script type="text/html" name="albumTmpl" >
+	<ul class="thumbnails" data-bind="template: { name: 'imgTmpl', foreach: aSetList , visible: aSetList().length > 0}">
+	</ul>
+</script>
+
+
+<script id="imgTmpl" type="text/html">
+	<li class="span2">
+		<div class="thumbnail">
+			<a  data-bind="attr:{title: imgTitle, href: imgUrl}" data-gallery="gallery">
+				<img data-bind="attr:{src : imgUrl, alt: imgTitle}"src="http://www.dailymakeover.com/wp-content/uploads/celeb-index/Selena_Gomez+Mar_31_2012.jpg" alt="">
+			</a>
+		</div>
+	</li>
+</script>
+	
+	
+	
+/*
+imgUrl
+imgTitle
+*/

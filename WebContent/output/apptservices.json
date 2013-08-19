@@ -1,0 +1,49 @@
+[
+    {
+        "serviceName": "Blow Dry",
+        "serviceDuration": 50,
+        "serviceDefaultCost": 1,
+        "serviceId": 39,
+        "serviceTaskList": [
+            {
+                "serviceTaskId": 28,
+                "skillId": 2,
+                "skillName": "Junior",
+                "boothType": "Cutting Chair",
+                "facilityId": 82,
+                "facilityName": "GTest2",
+                "serviceName": "Blow Dry",
+                "serviceTaskDuration": 30,
+                "serviceTaskOrder": 1,
+                "serviceTaskName": "Cut",
+                "deleteFlag": false
+            },
+            {
+                "serviceTaskId": 29,
+                "skillId": 1,
+                "skillName": "Trainee",
+                "boothType": "Cutting Chair",
+                "facilityId": 82,
+                "facilityName": "GTest2",
+                "serviceName": "Blow Dry",
+                "serviceTaskDuration": 10,
+                "serviceTaskOrder": 2,
+                "serviceTaskName": "Blow Dry",
+                "deleteFlag": false
+            },
+            {
+                "serviceTaskId": 30,
+                "skillId": 1,
+                "skillName": "Trainee",
+                "boothType": "Cutting Chair",
+                "facilityId": 82,
+                "facilityName": "GTest2",
+                "serviceName": "Blow Dry",
+                "serviceTaskDuration": 10,
+                "serviceTaskOrder": 3,
+                "serviceTaskName": "Wash",
+                "deleteFlag": false
+            }
+        ]
+    }
+]

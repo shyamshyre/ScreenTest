@@ -1,0 +1,30 @@
+<div class="tab-pane active" id="tab1">
+		<form class="form-horizontal" method="post">
+			<div>
+				<div class="EditServTitle">
+					<strong>Task Name</strong>
+				</div>
+				<div class="EditServTitle">
+					<strong>Duration</strong>
+				</div>
+				<div class="EditServTitle">
+					<strong>Skill Name</strong>
+				</div>
+				<div class="EditServTitle">
+					<strong>Booth Name</strong>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+			<div
+				data-bind="template:{name: 'eachTaskRow',foreach: servicesViewModel.serviceTasksList}">
+			</div>
+			<div class="clear"></div>
+			<div class="control-group MarTop20" data-bind="visible: servicesViewModel.serviceTasksList().length > 0">
+				<div class="controls">
+					<button type="button" class="btn">Save</button>
+					<button type="button" class="btn">Cancel</button>
+				</div>
+			</div>
+		</form>
+</div>

@@ -1,0 +1,9 @@
+<ul class="thumbnails" data-toggle="modal-gallery" data-target="#modal-gallery" data-bind="foreach: setOfImgs"> 
+<li class="span2" >
+<div class="thumbnail">
+	<a  data-bind="attr:{title: imgTitle, href: imgUrl,'data-index': $index()}"  data-gallery="gallery">
+		<img data-bind="attr:{src : imgUrl}"/>
+	</a>
+</div>
+</li>
+</ul>

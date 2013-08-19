@@ -1,0 +1,52 @@
+<form class="form-horizontal" method="post" >
+	<div data-bind="foreach:servicesViewModel.businessHours">
+	<div class="GrTitleBg">
+		<div class="FormHr Wid70" data-bind="text:day"></div>
+		<div class="FormHr">
+			<SELECT class="WidSm"
+				data-bind="'options': ConstantsViewModel.hrCmb, 'optionsCaption': 'Select...', value: fromHr,disable:status">
+			</SELECT>
+		</div>
+		<div class="FormHr">
+			<SELECT class="WidSm"
+				data-bind="'options': ConstantsViewModel.minCmb, 'optionsCaption': 'Select...', value: fromMin,disable:status">
+			</SELECT>
+		</div>
+		<div class="FormHr">
+			<SELECT class="WidSm"
+				data-bind="'options': ConstantsViewModel.amPmCmb, 'optionsCaption': 'Select...', value: fromAMPM,disable:status">
+			</SELECT>
+		</div>
+		<div class="FormHr">to</div>
+		<div class="FormHr">
+			<SELECT class="WidSm"
+				data-bind="'options': ConstantsViewModel.hrCmb, 'optionsCaption': 'Select...', value: toHr,disable:status">
+			</SELECT>
+		</div>
+		<div class="FormHr">
+			<SELECT class="WidSm"
+				data-bind="'options': ConstantsViewModel.minCmb, 'optionsCaption': 'Select...', value: toMin,disable:status">
+			</SELECT>
+		</div>
+		<div class="FormHr">
+			<SELECT class="WidSm"
+				data-bind="'options': ConstantsViewModel.amPmCmb, 'optionsCaption': 'Select...', value: toAMPM,disable:status">
+			</SELECT>
+		</div>
+		<div class="FormHr">
+			<label class="checkbox inline"> <input type="checkbox"
+				data-bind="checked: status"> Close
+			</label>
+		</div>
+		<div class="clear"></div>
+	</div>
+	</div>
+	<div class="control-group MarTop20">
+		<div class="controls">
+			<button type="button" class="btn"
+				data-bind="click: function(){servicesViewModel.updateBHrs();}">Update
+				Hours</button>
+			<button type="button" class="btn">Cancel</button>
+		</div>
+	</div>
+</form>

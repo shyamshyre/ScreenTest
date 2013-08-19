@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>BLUEWATERDHEAD</title>
+<style type="text/css">
+body{margin:0;font-family:Arial, Helvetica, sans-serif; font-size:.76em;color:#333; background:#FFF;color:#333}
+.bodyWrp{width:97.90%;padding:1%;float:left}
+.clrBlu{color:#214984}
+table{border-top:1px solid #333;border-left:1px solid #333; }
+td{border-right:1px solid #333;border-bottom:1px solid #333;padding:3px 5px;vertical-align:top }
+.ro{width:100%;display:inline-block;margin-top:15px;background:#a0cef5;}
+a{color:#006ec3}
+ul{margin:0 0 0 20px;padding:0;display:block} li{padding-bottom:15px}
+</style>
+</head>
+<body>
+<div class="bodyWrp">
+<div class="ro">Dear $map.firstname $map.lastname </div><br>
+<div class="ro">You have been received invitation from $map.mail_from, Please join us using $map.url.</div><br>
+<table  cellspacing="0">
+<tr>
+	<td  width="250">$map.comments</td>
+</tr>
+<tr>
+  <td width="250">About Salon social networking</strong></td>
+</tr>
+<tr>
+  <td width="270">!!!!Here we go for salon infomation!!!!!!!!</td>
+</tr>
+</table>
+<br>
+<div class="ro">
+
+  <strong>Marketer:</strong><br />
+    BLUEWATER HEAD DEVELOPMENT TEAM<br />
+    US/INDIA<br />
+    111111<br /> 
+</div>
+</div>
+</body>
+</html>

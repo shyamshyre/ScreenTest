@@ -1,0 +1,54 @@
+
+<form class="form-horizontal">
+	<div class="control-group">
+		<label class="control-label" for="service">Service<span>*</span></label>
+		<div class="controls">
+			<SELECT 
+				data-bind="'options': ConstantsViewModel.skillsList,  'optionsText': 'skillName', 'optionsValue':'skillId','optionsCaption': 'Select...', value: CreateAgentViewModel.serviceName">
+			</SELECT>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="Agents">Agents<span>*</span></label>
+		<div class="controls">
+			<SELECT 
+				data-bind="'options': ConstantsViewModel.chairsList,  'optionsText': 'chairName', 'optionsValue':'chairId','optionsCaption': 'Select...', value: CreateAgentViewModel.agentName">
+			</SELECT>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="Education">Service Education<span>*</span></label>
+		<div class="controls">
+			<input type="text" data-bind="text:CreateAgentViewModel.serviceEdu" required>
+
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="Skils">Skills</label>
+		<div class="controls">
+			<textarea rows="2" data-bind="text: CreateAgentViewModel.skills" required></textarea>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="ServiceCost">Service Cost<span>*</span></label>
+		<div class="controls">
+			<input type="text" data-bind="text: CreateAgentViewModel.cost" required pattern="^[0-9]+$">
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="PublishService">Publish
+			Service<span>*</span>
+		</label>
+		<div class="controls">
+			<SELECT 
+				data-bind="'options': ConstantsViewModel.yOrn, 'optionsCaption': 'Select...', value: CreateAgentViewModel.publish">
+			</SELECT>
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="controls">
+			<button type="button" data-bind="click: function(){CreateAgentViewModel.submitAgent();}" class="btn">Create Agent</button>
+			<button type="button" class="btn">Back</button>
+		</div>
+	</div>
+</form>

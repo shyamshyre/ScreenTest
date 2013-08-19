@@ -1,0 +1,23 @@
+<div class="span12" id="ServiceSection">
+	<ul class="StepPanelMenu">
+		<li data-bind="css : servicesViewModel.selectTmpl()=='serviceAgent'?'active':''"><span>1</span>
+			<a data-bind="click: function(){servicesViewModel.setTmpl('serviceAgent');}" href="#">Services</a>
+		</li>
+		<li data-bind="css : servicesViewModel.selectTmpl()=='serviceEdit'?'active':''"><span>2</span>
+			<a data-bind="click: function(){servicesViewModel.setTmpl('serviceEdit');}" href="#">Edit Service</a>
+		</li>
+		<li data-bind="css : servicesViewModel.selectTmpl()=='createAgent'?'active':''"><span>3</span>
+			<a data-bind="click: function(){servicesViewModel.setTmpl('createAgent');}" href="#">Create Agent</a>
+		</li>
+		<li data-bind="css : servicesViewModel.selectTmpl()=='createBooth'?'active':''"><span>4</span>
+			<a data-bind="click: function(){servicesViewModel.setTmpl('createBooth');}" href="#">Create Booth</a>
+		</li>
+		<li data-bind="css : servicesViewModel.selectTmpl()=='businessHrs'?'active':''"><span>5</span>
+			<a data-bind="click: function(){servicesViewModel.setTmpl('businessHrs');}" href="#">Business Hrs</a>
+		</li>
+		<div class="clear">&nbsp;</div>
+	</ul>
+	<div data-bind="template:{name: servicesViewModel.selectTmpl}">
+		
+	</div>
+</div>

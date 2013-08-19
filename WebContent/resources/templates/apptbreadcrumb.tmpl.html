@@ -1,0 +1,20 @@
+ <div class="span12" id="ServiceSection">
+    	<ul class="StepPanelMenu">
+    	<li data-bind="css : apptViewModel.selectTmpl()=='apptservices'?'active':''"><span>1</span>
+			<a data-bind="click: function(){apptViewModel.setTmpl('apptservices');}" href="#">Services</a>
+		</li>
+		<li data-bind="css : apptViewModel.selectTmpl()=='apptserviceProvider'?'active':''"><span>2</span>
+			<a data-bind="click: function(){apptViewModel.setTmpl('apptserviceProvider');}" href="#">Service provider</a>
+		</li>
+			<li data-bind="css : apptViewModel.selectTmpl()=='apptdateTime'?'active':''"><span>3</span>
+			<a data-bind="click: function(){apptViewModel.setTmpl('apptdateTime');}" href="#">Date and time</a>
+		</li>
+    
+    	<li data-bind="css : apptViewModel.selectTmpl()=='apptbook'?'active':''"><span>4</span>
+			<a data-bind="click: function(){apptViewModel.setTmpl('apptbook');}" href="#">Book it</a>
+		</li>
+       <div class="clear"></div> 
+        </ul>    
+	<div data-bind="template:{name: apptViewModel.selectTmpl}">
+	</div>
+</div>

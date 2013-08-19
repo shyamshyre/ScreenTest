@@ -1,0 +1,18 @@
+[
+    {
+        "agentName": "GTest1",
+        "agentId": 80
+    },
+    {
+        "agentName": "GTest2",
+        "agentId": 81
+    },
+    {
+        "agentName": "GTest3",
+        "agentId": 82
+    },
+    {
+        "agentName": "GTest4",
+        "agentId": 83
+    }
+]

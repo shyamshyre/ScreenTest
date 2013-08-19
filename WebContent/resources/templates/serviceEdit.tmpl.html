@@ -1,0 +1,30 @@
+<div class="MarTop20">
+	<div class="tabbable tabs-left"
+		data-bind="with: servicesViewModel.currSet">
+		<ul class="nav nav-tabs" data-bind="foreach: setOfServices">
+			<li	data-bind="attr:{class:  servicesViewModel.tabIndex() == $index()? 'active':''}">
+				<a data-toggle="tab" data-bind="click : function(){ servicesViewModel.changeTabIndex($index());}">
+					<i data-bind="text: serviceName"></i>
+			</a>
+			</li>
+		</ul>
+		<div class="tab-content"
+			data-bind="template:{name: 'serviceTasksList'}">
+		</div>
+		<div class="tab-content"
+			data-bind="visible: servicesViewModel.serviceTasksList().length == 0">
+			 No task(s) to show.
+		</div>
+	</div>
+</div>
+<div class="pagination pagination-left">
+	<ul data-bind="foreach: servicesViewModel.services">
+		<li
+			data-bind="attr:{ class:  servicesViewModel.currIndex() == $index()? 'active':''}">
+			<a href="#"
+			data-bind="text: $index()+1, click: function(){ servicesViewModel.changeSet($index());}">
+		</a>
+		</li>
+	</ul>
+</div>
+<div class="clear"></div>

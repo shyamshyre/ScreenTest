@@ -1,0 +1,45 @@
+<div class="CretNewBg">
+	<a href="#">Create New Service
+		<div class="arw">
+			<img src="./resources/images/PlusIcon.png">
+		</div>
+	</a>
+</div>
+<div data-bind="with: servicesViewModel.currSet">
+	<div class="accordion" id="accordion2" data-bind="foreach : setOfServices">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+				<a class="accordion-toggle" data-toggle="collapse"
+					data-parent="#accordion2"
+					data-bind="attr:{href: '#collapse'+$index()}">
+					<i data-bind="text: serviceName"></i>
+					<div class="arw">
+						<img src="./resources/images/arwDown.png">
+					</div>
+				</a>
+			</div>
+			<div data-bind="attr:{id: 'collapse'+$index(), css: 'accordion-body collapse'}">
+				<div class="accordion-inner PadNone">
+					<table width="98%" align="center">
+						<tbody>
+							<tr data-bind="foreach: taskList">
+								<td>
+									<div class="PadLeft10" data-bind="text:taskName"></div>
+									<div class="TimeIcon" data-bind="text:time"></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pagination pagination-right">
+	<ul data-bind="foreach: servicesViewModel.services">
+		<li data-bind="attr:{ class:  servicesViewModel.currIndex() == $index()? 'active':''}">
+			<a href="#" data-bind="text: $index()+1, click: function(){ servicesViewModel.changeSet($index());}">
+			</a>
+		</li>
+	</ul>
+</div>
+</div>

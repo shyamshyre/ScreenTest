@@ -1,0 +1,21 @@
+<div class="GrTitleBg">
+	<div class="FormHr Wid70" data-bind="text:taskName"></div>
+	<div class="FormHr">
+		<input class="input-mini" data-bind="text:duration">
+	</div>
+	<div class="FormHr">
+		<SELECT class="Wid100"
+				data-bind="'options': ConstantsViewModel.skillsList,  'optionsText': 'skillName', 'optionsValue':'skillId','optionsCaption': 'Select...', value: skillName">
+			</SELECT>
+	</div>
+	<div class="FormHr">
+	<SELECT class="Wid100"
+				data-bind="'options': ConstantsViewModel.chairsList, 'optionsText': 'chairName', 'optionsValue':'chairId', 'optionsCaption': 'Select...', value: boothName">
+			</SELECT>
+	</div>
+	<div class="FormHr">
+		<a data-bind="click: function(){servicesViewModel.deleteTaskRow( $data )}"><img src="./resources/images/CloseIcon.png"></a>
+	</div>
+
+	<div class="clear"></div>
+</div>
