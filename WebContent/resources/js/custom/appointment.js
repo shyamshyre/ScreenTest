@@ -23,9 +23,8 @@ function servicesTaskList(serviceTaskId,skillId,skillName,boothType,facilityId,f
 	
 }
 
-
 var apptViewModel={
-		apptservices   :ko.observableArray(),		
+		apptservices   :ko.observableArray([]),		
 		selectTmpl		: ko.observable(""),	
 		loaddata:function(appt){
 			var xhr = $.ajax({
@@ -36,8 +35,12 @@ var apptViewModel={
 			      var obj= ko.utils.arrayMap(data,function(item){
 			    	   return new serviceList(item.serviceName,item.serviceDuration,item.serviceDefaultCost,item.serviceId,item.serviceTaskList); 
 			       });
-			      this.apptservices =obj;
-			      alert(ko.toJSON("final Result"+ko.toJSON(obj)));
+			      apptservices= obj;
+			      alert(ko.toJSON(apptservices[0].serviceTaskList));
+//			      ko.utils.arrayForEach(this.apptservices, function(item) {
+//			    	  
+//				        
+//				    });
 			    }
 			});
 		},
@@ -45,9 +48,10 @@ var apptViewModel={
 		{this.selectTmpl( template );},		
 		};
 
-apptViewModel.serviceTaskList=ko.observableArray();
 
 
+
+//ko.applyBindings(apptViewModel);
 //function ServicesSetModel( services ){
 //	
 //	var servicesSet = ko.utils.arrayMap( services.setOfServices , function(service){

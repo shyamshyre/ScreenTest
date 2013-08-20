@@ -6,7 +6,7 @@
     <td>Booked</td>
   </tr>
    </table>
-<div class="GrTitleBg">Select a service</div>
+<div class="GrTitleBg" >Select a service</div>
 
                   <table class="table">
               <thead>
@@ -16,18 +16,22 @@
                   <th>Price</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody data-bind="foreach:apptservices">
                 <tr>
-                  <td class="BlowIcon">Blow Dry</td>
-                  <td class="TimeIcon">30 Min</td>
+                  <td class="BlowIcon" data-bind="text:serviceName"></td>
+                  <td class="TimeIcon"  data-bind="text:serviceDuration"></td>
                   <td>$25</td>
                 </tr>
+            
+               <tbody data-bind="foreach:apptservices[0].serviceTaskList">
                  <tr>
-                  <td class="CutIcon">Cut</td>
-                  <td class="TimeIcon">30 Min</td>
+                  <td class="CutIcon" data-bind="text:skillName"></td>
+                  <td class="TimeIcon" data-bind="text:skillName"></td>
                   <td>$25</td>
                 </tr>
-                 <tr>
+                </tbody>
+                <!--</div> -->
+               <!--   <tr>
                   <td class="WashIcon">Wash</td>
                   <td class="TimeIcon">30 Min</td>
                   <td>$25</td>
@@ -36,7 +40,7 @@
                   <td class="BlowIcon">Blow Dry</td>
                   <td class="TimeIcon">30 Min</td>
                   <td>$25</td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>           
     
