@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css"	href="./resources/css/custom/home.css" />
 <link rel="stylesheet" type="text/css"	href="./resources/css/image-gallery/bootstrap-image-gallery.min.css">
 <link rel="stylesheet" type="text/css"	href="./resources/css/SlidesJS/slidejs.css">
+<link rel="stylesheet" type="text/css"  href="./resources/css/custom/datepicker.css" />
 <!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <!-- Le styles -->
@@ -43,6 +44,8 @@ body {
     <![endif]-->
 </head>
 
+
+
 <body>
 
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -56,8 +59,10 @@ body {
 				<a class="brand" href="#"><img src="./resources/images/logo.png" /></a>
 				<ul class="nav">
 					<li><a href="#"><img src="./resources/images/HomeIcon.png"></a></li>
-					<li><a href="#about"><img src="./resources/images/GruIcon.png"></a></li>
-					<li><a href="#contact"><img src="./resources/images/MsgIcon.png"></a></li>
+					<li><a href="#about"><img
+							src="./resources/images/GruIcon.png"></a></li>
+					<li><a href="#contact"><img
+							src="./resources/images/MsgIcon.png"></a></li>
 				</ul>
 				<div class="nav-collapse collapse">
 					<p class="navbar-text pull-right">
@@ -113,9 +118,35 @@ body {
 										<a data-bind="click: function(){viewModel.setTmpl('notes');}" href="#"><img src="./resources/images/NoteIcon.png"></a>
 										<a data-bind="click: function(){viewModel.setTmpl('apptbreadcrumb');apptViewModel.loaddata('appointment');}" href="#">App<img src="./resources/images/NoteIcon.png"></a>
 									</div>
-									<div class="UpdateBt">
+										<div class="UpdateBt" id="flip">
 										<a href="#">Update Status</a>
 									</div>
+									<div id="panel">
+    <div class="ContBlk"></div>
+    <div class="BotNavBar">
+    <div>
+    <ul class="StusIconList">
+    <li><a href="#"><img src="./resources/images/AddUserIcon.png"></a></li>
+    <li><a href="#"><img src="./resources/images/CamGreyIcon.png"></a></li>
+    </ul>
+    </div>
+    <div class="PostBlk">
+        <div class="btn-group">
+    <button class="btn" style="margin:0;">Friends</button>
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+    <li><a href="#">Friends</a></li>
+    <li><a href="#">Family</a></li>
+    <li><a href="#">Office</a></li>
+    <li><a href="#">Friends</a></li>
+    </ul>
+    </div>
+    <button type="submit" class="btn">post</button></div>
+    <div class="clear"></div>
+    </div>
+    </div>
 									<div class="clear"></div>
 								</div>
 							</div>
@@ -421,11 +452,24 @@ body {
 	<script type="text/javascript" src="./resources/js/knockout/koExternalTemplateEngine_all.js"></script>
 	<script type="text/javascript" src="./resources/js/knockout/knockout.validation.js"></script>
 	<script type="text/javascript" src="./resources/js/knockout/knockout.mapping.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script type="text/javascript" src="./resources/js/custom/TestConstants.js"></script>
 	<script type="text/javascript" src="./resources/js/custom/main.js"></script>
 	<script type="text/javascript" src="./resources/js/custom/home.js"></script>
 	<script type="text/javascript" src="./resources/js/custom/appointment.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#flip").click(function() {
+				$("#panel").slideToggle("slow");
+			});
+		});
+				$(document).ready(function() {
+			$("#flip1").click(function() {
+				$("#pane2").slideToggle("slow");
+			});
+		});
 
+	</script>
 </body>
 </html>
 

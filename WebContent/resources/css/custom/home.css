@@ -230,3 +230,86 @@ form span{ color:#F00}
 .Wid100{ width:100px;}
 
 .EditServTitle{ float:left; width:90px; color:#3187a2; font-size:11px; font-weight:bold;}
+
+/* update status */
+
+#panel
+{
+background-color:#fff;
+border:solid 1px #ccc;
+}
+#panel
+{
+display:none;
+margin-top:31px;
+}
+#panel .ContBlk{ height:50px; padding:5px 5px;}
+#panel .BotNavBar{ background:#eee; padding:5px 5px; border-top:1px solid #ccc;}
+.PostBlk{ float:right;}
+#panel ul.StusIconList{ margin:0; padding:0; list-style:none;}
+#panel ul.StusIconList li a{ opacity:0.6; float:left; padding:0px 7px 0px;border-right:1px solid #999;}
+#panel ul.StusIconList li a:hover{ background: #999; opacity:0.9; }
+
+#pane2
+{
+background-color:#fff;
+border:solid 1px #ccc;
+}
+#pane2
+{
+display:none;
+margin-top:31px;
+}
+/* upload file */
+div.custom_file_upload {
+	width: 230px;
+	height: 40px;
+}
+
+input.file {
+	width: 215px;
+	height: 20px;
+	color: #888;
+	padding: 5px;
+	outline: none; border-radius:none;
+}
+
+div.file_upload {
+	width: 80px;
+	height: 28px;
+	background: #3187a2;
+	display: inline;
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer;
+	color: #FFF;
+	text-align: center;
+	padding-top: 4px;
+	margin-left:-9px;
+}
+div.file_upload:before {
+	content: 'UPLOAD';
+	position: absolute;
+	left: 0; right: 0;
+	text-align: center;
+	
+	cursor: pointer;
+}
+
+div.file_upload input {
+	position: relative;
+	height: 30px;
+	width: 250px;
+	display: inline;
+	cursor: pointer;
+	opacity: 0;
+}
+
+ul.PhotoImgList{ margin:0; padding:0;}
+ul.PhotoImgList li{ float:left; display:block; border:1px solid #999; padding:5px 5px; margin:5px 5px; cursor:pointer;}
+ul.PhotoImgList li:hover{ border:1px solid #eee; }
+/* upload file ends*/
+
+.Fright{ float:right;}
+.Fleft{ float:left;}
+.MarLeft180{ margin-left:180px;}

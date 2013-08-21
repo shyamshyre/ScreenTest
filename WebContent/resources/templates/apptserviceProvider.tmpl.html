@@ -16,13 +16,13 @@
                   <th>Price</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody data-bind="foreach:apptagents">
                 <tr>
-                  <td class="UserIcon">Ken Smith</td>
-                  <td class="TimeIcon">30 Min</td>
+                  <td class="UserIcon"><a href="#" data-bind="click:apptViewModel.loadSchedule.bind($data)"><span data-bind="text:agentName" ></span></a></td>
+                  <td class="TimeIcon"></td>
                   <td>$25</td>
                 </tr>
                  </tbody>
             </table>           
     
-    </div>
+    

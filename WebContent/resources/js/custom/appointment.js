@@ -1,3 +1,6 @@
+
+
+
 function serviceList(serviceName,serviceDuration,serviceDefaultCost,serviceId,serviceTaskList)
 {
 	this.serviceName=ko.observable(serviceName);
@@ -23,7 +26,14 @@ function servicesTaskList(serviceTaskId,skillId,skillName,boothType,facilityId,f
 	
 }
 
+
+function Agent(agentName,agentId){
+	this.agentName = ko.observable(agentName);
+	this.agentId = ko.observable(agentId);
+}
+
 var apptViewModel={
+		apptagents: ko.observableArray([]),
 		apptservices   :ko.observableArray([]),		
 		selectTmpl		: ko.observable(""),	
 		loaddata:function(appt){
@@ -36,16 +46,49 @@ var apptViewModel={
 			    	   return new serviceList(item.serviceName,item.serviceDuration,item.serviceDefaultCost,item.serviceId,item.serviceTaskList); 
 			       });
 			      apptservices= obj;
-			      alert(ko.toJSON(apptservices[0].serviceTaskList));
-//			      ko.utils.arrayForEach(this.apptservices, function(item) {
-//			    	  
-//				        
-//				    });
-			    }
+					    }
 			});
 		},
+		loadAgents:function(data,event){
+			$( "#datepicker" ).datepicker();
+			var serviceid_id=ko.toJSON(data.serviceId);
+			var xhr = $.ajax({
+			    type: "GET",
+			    url: "http://localhost:8080/ScreenTest/output/apptagents.json",
+			    //url: "http://localhost:8080/ScreenTest/output/apptagents.json/"+serviceid_id,
+			    //data: "name=John&location=Boston",
+			    success: function(data){
+			      var obj= ko.utils.arrayMap(data,function(item){
+			    	   return new Agent(item.agentName,item.agentId); 
+			       });
+			      apptagents= obj;
+			     // alert(ko.toJSON(apptagents));
+			    }
+			});
+			apptViewModel.setTmpl('apptserviceProvider');
+		},
+		loadSchedule:function(data,event){
+			var agentId=ko.toJSON(data.agentId);
+			alert(agentId);
+			var xhr = $.ajax({
+			    type: "GET",
+			    url: "http://localhost:8080/ScreenTest/output/apptagents.json",
+			    //url: "http://localhost:8080/ScreenTest/output/apptagents.json/"+serviceid_id,
+			    //data: "name=John&location=Boston",
+			    success: function(data){
+			      var obj= ko.utils.arrayMap(data,function(item){
+			    	   return new Agent(item.agentName,item.agentId); 
+			       });
+			      apptagents= obj;
+			     // alert(ko.toJSON(apptagents));
+			    }
+			});
+			apptViewModel.setTmpl('apptdateTime');
+		},
 		setTmpl: function ( template )
-		{this.selectTmpl( template );},		
+		{
+			this.selectTmpl( template );},	
+			
 		};
 
 
