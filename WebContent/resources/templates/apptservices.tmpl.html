@@ -16,9 +16,9 @@
                   <th>Price</th>
                 </tr>
               </thead>
-               <tbody data-bind="foreach:apptservices">
+              <tbody data-bind="foreach:apptservices">
                 <tr>
-                  <td class="BlowIcon" > <a href="<%=request.getContextPath()%>/rest/appointment/serviceAgents/"><span data-bind="text:serviceName"></span></a>  </td>
+                  <td class="BlowIcon"><a href="#" data-bind="click:apptViewModel.loadAgents.bind($data)" ><span data-bind="text:serviceName" ></span></a></td>
                   <td class="TimeIcon"  data-bind="text:serviceDuration"></td>
                   <td>$25</td>
                 </tr>
