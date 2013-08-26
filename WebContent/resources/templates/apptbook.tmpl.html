@@ -1,10 +1,10 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td>    <form class="form-horizontal">
+    <td>    <form id="appointmentForm" class="form-horizontal">
     <div class="control-group">
     <label class="control-label" for="AppointName">Appointment Name</label>
     <div class="controls">
-    <input type="text" data-bind="" id="AppointName">
+    <input type="text" name="AppointName" id="AppointName">
     </div>
     </div>
     <div class="control-group">
@@ -16,24 +16,24 @@
     <div class="control-group">
     <label class="control-label" for="Notes">Notes</label>
     <div class="controls">
-       <textarea rows="2" data-bind="" id="Notes"></textarea>
+       <textarea rows="2" data-bind="" name="Notes" id="Notes"></textarea>
     </div>
     </div>
     <div class="control-group">
     <label class="control-label" for="SourceChannel">Source Channel</label>
     <div class="controls">
-    <input type="text" data-bind="" id="SourceChannel">
+    <input type="text" data-bind="" name="SourceChannel" id="SourceChannel">
     </div>
     </div>
     <div class="control-group">
     <label class="control-label" for="SourceClient">Source Client Name</label>
     <div class="controls">
-    <input type="text"  data-bind="" id="SourceClient">
+    <input type="text"  data-bind="" name="SourceClient" id="SourceClient">
     </div>
     </div>
     <div class="control-group">
     <div class="controls">
-    <button type="submit" class="btn">Book Appointment</button><button type="submit" class="btn">Cancel</button>
+    <button type="submit" data-bind="click:apptViewModel.bookAppointment.bind($data)" class="btn">Book Appointment</button><button type="submit" class="btn">Cancel</button>
     </div>
     </div>
     </form></td>
